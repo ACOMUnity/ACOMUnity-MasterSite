@@ -197,7 +197,7 @@ const ImageContent = styled.div`
           text-shadow: silver 0px 2px 12px;
 
           @media (max-width: 492px) {
-            font-size: 24px;
+            font-size: 20px;
           }
         }
       }

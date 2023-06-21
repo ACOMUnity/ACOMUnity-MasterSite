@@ -22,7 +22,7 @@ export const Global = createGlobalStyle`
   background-color: rgb(4, 8, 16);
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
