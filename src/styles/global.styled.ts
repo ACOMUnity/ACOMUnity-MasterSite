@@ -6,15 +6,6 @@ export const Global = createGlobalStyle`
     border: 0 solid;
 }
 
-*, :after, :before {
-    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
-    --tw-ring-offset-width: 0px;
-    --tw-ring-offset-color: #fff;
-    --tw-ring-color: rgba(59,130,246,0.5);
-    --tw-ring-offset-shadow: 0 0 transparent;
-    --tw-ring-shadow: 0 0 transparent;
-}
-
 :root {
   font-family: 'Roboto Mono',monospace,Play,Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -83,7 +74,7 @@ ul, ol {
 
    
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #fff;
     background-color: #ffffff;
@@ -94,6 +85,6 @@ ul, ol {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 `;
