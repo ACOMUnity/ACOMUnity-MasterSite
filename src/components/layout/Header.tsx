@@ -79,7 +79,7 @@ const HeaderContainer = styled.div`
   top: 0;
   background-color: rgb(4, 8, 16);
   z-index: 99999;
-  height: 8vh;
+  height: 12vh;
 `;
 
 const HeaderDetails = styled.div`
