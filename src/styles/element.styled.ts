@@ -1,11 +1,11 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.section`
-  width: 100%;
-  max-width: ${({ fullWidth }) => (fullWidth ? "100%" : "1440px")};
-  padding: 24px;
-  margin: auto;
-`;
+// export const Container = styled.section`
+//   width: 100%;
+//   max-width: ${({ fullWidth }) => (fullWidth ? "100%" : "1440px")};
+//   padding: 24px;
+//   margin: auto;
+// `;
 
 export const Title = styled.h1`
   color: ${({ color }) => (color ? color : "black")};
@@ -141,15 +141,15 @@ export const Button = styled.button<IBtn>`
 
 // Resizes based on device scrren size, very fluid
 
-export const FluidTitle = styled.h1`
-  color: ${({ color }) => (color ? color : "black")};
-  font-size: 4.8vw;
-  font-weight: ${({ $weight }) => ($weight ? $weight : "700")};
+// export const FluidTitle = styled.h1`
+//   color: ${({ color }) => (color ? color : "black")};
+//   font-size: 4.8vw;
+//   font-weight: ${({ $weight }) => ($weight ? $weight : "700")};
 
-  ${({ theme }) => theme.breakpoints.up("sm")} {
-    font-size: ${(props) => (props.$size ? props.$size : "24px")};
-  }
-`;
+//   ${({ theme }) => theme.breakpoints.up("sm")} {
+//     font-size: ${(props) => (props.$size ? props.$size : "24px")};
+//   }
+// `;
 
 // This is a spinning loader, inline by default, to use the overlay Loader, you can checkout the OverlayLoader in src/components/ui
 

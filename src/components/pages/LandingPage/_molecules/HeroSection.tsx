@@ -8,7 +8,7 @@ import TypewriterComponent from "typewriter-effect";
 
 import img from "../../../../assets/vr.png";
 import { Button } from "../../../../styles/element.styled";
-import { bounce, slideInRight } from "../../../../styles/animate.styled";
+import { bounce } from "../../../../styles/animate.styled";
 
 const HeroSection: React.FC = () => {
   return (

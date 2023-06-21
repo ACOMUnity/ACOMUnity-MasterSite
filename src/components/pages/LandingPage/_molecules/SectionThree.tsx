@@ -7,7 +7,6 @@ import chainlink from "../../../../assets/chainlink.svg";
 import parsiq from "../../../../assets/parsiq.svg";
 import fractal from "../../../../assets/fractal.svg";
 import blocksync from "../../../../assets/blocksync.svg";
-import plethori from "../../../../assets/plethori.svg";
 import cryptocom from "../../../../assets/crypto.com.svg";
 import cryptoslate from "../../../../assets/cryptoslate.svg";
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
-import { Button } from "../../../../styles/element.styled";
 import { data } from "./atoms/data";
 import InfoCard from "./atoms/InfoCard";
 
