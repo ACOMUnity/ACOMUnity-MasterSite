@@ -129,10 +129,10 @@ const TextContent = styled.div`
 
   @media (max-width: 492px) {
     h1 {
-      font-size: 30px;
+      font-size: 36px;
 
       span {
-        font-size: 30px;
+        font-size: 36px;
       }
     }
   }

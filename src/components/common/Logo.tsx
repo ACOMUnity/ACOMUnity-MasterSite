@@ -20,6 +20,7 @@ const LogoContainer = styled.div`
     font-size: 28px;
     color: purple;
     font-weight: 700;
+    margin: 0;
 
     span {
       font-size: 28px;

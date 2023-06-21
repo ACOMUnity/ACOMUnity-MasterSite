@@ -79,11 +79,12 @@ const HeaderContainer = styled.div`
   top: 0;
   background-color: rgb(4, 8, 16);
   z-index: 99999;
+  height: 8vh;
 `;
 
 const HeaderDetails = styled.div`
   display: flex;
-  padding: 0 48px;
+  padding: 24px 48px;
   justify-content: space-between;
   align-items: center;
 `;
