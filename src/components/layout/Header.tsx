@@ -182,7 +182,7 @@ interface INav {
 
 const Nav = styled.nav<INav>`
   transform: ${(props) =>
-    props.open === "open" ? "translateX(0)" : "translateX(1400px)"};
+    props.open === "open" ? "translateX(0)" : "translateX(4400px)"};
   position: fixed;
   top: 0;
   height: 100vh;
