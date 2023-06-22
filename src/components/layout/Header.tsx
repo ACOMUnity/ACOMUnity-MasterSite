@@ -1,8 +1,7 @@
-import React, { ReactElement, useState } from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
 
 import Logo from "../common/Logo";
-import { Link } from "react-router-dom";
 import { Button } from "../../styles/element.styled";
 
 type OpenNav = boolean;
@@ -14,8 +13,8 @@ const Header: React.FC = () => {
   };
 
   const scrollIntoView = (id: string) => {
-    console.log(id);
     const element = document.getElementById(id) as HTMLElement;
+
     element.scrollIntoView({
       behavior: "smooth",
       inline: "nearest",
