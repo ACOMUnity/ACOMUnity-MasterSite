@@ -12,7 +12,7 @@ import { bounce } from "../../../../styles/animate.styled";
 
 const HeroSection: React.FC = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id="hero">
       <TextContainer>
         <TextContent>
           <h1>

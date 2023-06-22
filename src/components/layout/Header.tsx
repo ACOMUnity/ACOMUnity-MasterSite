@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import { styled } from "styled-components";
 
 import Logo from "../common/Logo";
@@ -12,28 +12,27 @@ const Header: React.FC = () => {
   const handleToggle = () => {
     setOpen(!open);
   };
-  console.log(open);
+
+  const scrollIntoView = (id: string) => {
+    console.log(id);
+    const element = document.getElementById(id) as HTMLElement;
+    element.scrollIntoView({
+      behavior: "smooth",
+      inline: "nearest",
+    });
+  };
+
   return (
     <HeaderContainer>
       <HeaderDetails>
         <Logo />
         <NavigationDetails>
           <NavLinks>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/">About</Link>
-            </li>
-            <li>
-              <Link to="/">Features</Link>
-            </li>
-            <li>
-              <Link to="/">Partners</Link>
-            </li>
-            <li>
-              <Link to="/">Roadmap</Link>
-            </li>
+            <li onClick={() => scrollIntoView("hero")}>Home</li>
+            <li onClick={() => scrollIntoView("about")}>About</li>
+            <li onClick={() => scrollIntoView("features")}>Features</li>
+            <li onClick={() => scrollIntoView("partners")}>Partners</li>
+            <li onClick={() => scrollIntoView("roadmap")}>Roadmap</li>
           </NavLinks>
           <CallToAction>
             <Button $type="outlined">Launch App</Button>
@@ -47,21 +46,11 @@ const Header: React.FC = () => {
       </HeaderDetails>
       <Nav open={open ? "open" : "close"}>
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/">About</Link>
-          </li>
-          <li>
-            <Link to="/">Features</Link>
-          </li>
-          <li>
-            <Link to="/">Partners</Link>
-          </li>
-          <li>
-            <Link to="/">Roadmap</Link>
-          </li>
+          <li>Home</li>
+          <li onClick={() => scrollIntoView("about")}>About</li>
+          <li>Features</li>
+          <li>Partners</li>
+          <li>Roadmap</li>
           <Button $type="outlined" fullwidth="true">
             Launch App
           </Button>
@@ -79,7 +68,6 @@ const HeaderContainer = styled.div`
   top: 0;
   background-color: rgb(4, 8, 16);
   z-index: 99999;
-  height: 12vh;
 `;
 
 const HeaderDetails = styled.div`
@@ -87,6 +75,10 @@ const HeaderDetails = styled.div`
   padding: 24px 48px;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 420px) {
+    padding: 24px;
+  }
 `;
 
 const NavigationDetails = styled.nav`
@@ -106,10 +98,9 @@ const NavLinks = styled.ul`
   justify-content: center;
 
   > li {
-    a {
-      color: #fff;
-      font-weight: 16px;
-    }
+    color: #fff;
+    font-weight: 16px;
+    cursor: pointer;
   }
 `;
 
@@ -183,7 +174,7 @@ interface INav {
 
 const Nav = styled.nav<INav>`
   transform: ${(props) =>
-    props.open === "open" ? "translateX(0)" : "translateX(4400px)"};
+    props.open === "open" ? "translateX(0)" : "translateX(-4400px)"};
   position: fixed;
   top: 0;
   height: 100vh;
@@ -195,7 +186,7 @@ const Nav = styled.nav<INav>`
   display: flex;
   padding-top: 124px;
   justify-content: center;
-  transition: all 0.3s ease-in;
+  transition: all 2s ease-in-out;
 
   ul {
     display: flex;
@@ -206,10 +197,7 @@ const Nav = styled.nav<INav>`
 
     li {
       font-size: 24px;
-
-      a {
-        color: silver;
-      }
+      color: silver;
     }
   }
 `;

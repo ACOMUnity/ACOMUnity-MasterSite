@@ -12,7 +12,7 @@ import cryptoslate from "../../../../assets/cryptoslate.svg";
 
 const SectionThree: React.FC = () => {
   return (
-    <SectionThreeContainer>
+    <SectionThreeContainer id="partners">
       <InnerContainer>
         <h3>Corporate Partners</h3>
         <LogoContainer>

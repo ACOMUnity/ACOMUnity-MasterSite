@@ -8,7 +8,7 @@ const SectionOne: React.FC = () => {
   const description =
     " ACOMUnity Master DAO is a groundbreaking concept that introduces a new paradigm in decentralized autonomous organizations (DAOs). Serving as the pinnacle of DAO hierarchy, the Master DAO establishes a framework for orchestrating and governing multiple subordinate DAOs within its ecosystem. Imagine a powerful and interconnected network of DAOs, each with its unique purpose and specialized focus, working together harmoniously under the guidance of the Master DAO. This innovative approach enables seamless collaboration, coordination, and resource allocation among the constituent DAOs, fostering a vibrant and thriving ecosystem.";
   return (
-    <SectionOneContainer>
+    <SectionOneContainer id="about">
       <ContainerHeader>
         <div>
           <h3>What is ACOMUnity Master DAO?</h3>

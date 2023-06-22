@@ -9,7 +9,7 @@ import enhance from "../../../../assets/enhance.svg";
 
 const SectionTwo: React.FC = () => {
   return (
-    <SectionTwoContainer>
+    <SectionTwoContainer id="features">
       <InnerContentBox>
         <InnerContent>
           <SVGContainer>
@@ -245,6 +245,10 @@ const Entry = styled.div`
     font-size: 18px;
     color: silver;
     width: 550px;
+
+    @media (max-width: 550px) {
+      width: 300px;
+    }
   }
 
   @media (max-width: 492px) {
