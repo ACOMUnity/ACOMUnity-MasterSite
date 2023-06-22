@@ -9,7 +9,7 @@ type OpenNav = boolean;
 const Header: React.FC = () => {
   const [open, setOpen] = useState<OpenNav>(false);
   const handleToggle = () => {
-    setOpen(!open);
+    setOpen((prev) => !prev);
   };
 
   const scrollIntoView = (id: string) => {
@@ -45,11 +45,46 @@ const Header: React.FC = () => {
       </HeaderDetails>
       <Nav open={open ? "open" : "close"}>
         <ul>
-          <li>Home</li>
-          <li onClick={() => scrollIntoView("about")}>About</li>
-          <li>Features</li>
-          <li>Partners</li>
-          <li>Roadmap</li>
+          <li
+            onClick={() => {
+              scrollIntoView("hero");
+              handleToggle();
+            }}
+          >
+            Home
+          </li>
+          <li
+            onClick={() => {
+              scrollIntoView("about");
+              handleToggle();
+            }}
+          >
+            About
+          </li>
+          <li
+            onClick={() => {
+              scrollIntoView("features");
+              handleToggle();
+            }}
+          >
+            Features
+          </li>
+          <li
+            onClick={() => {
+              scrollIntoView("partners");
+              handleToggle();
+            }}
+          >
+            Partners
+          </li>
+          <li
+            onClick={() => {
+              scrollIntoView("roadmap");
+              handleToggle();
+            }}
+          >
+            Roadmap
+          </li>
           <Button $type="outlined" fullwidth="true">
             Launch App
           </Button>
@@ -185,7 +220,7 @@ const Nav = styled.nav<INav>`
   display: flex;
   padding-top: 124px;
   justify-content: center;
-  transition: all 2s ease-in-out;
+  transition: all 0.8s ease-in-out;
 
   ul {
     display: flex;
