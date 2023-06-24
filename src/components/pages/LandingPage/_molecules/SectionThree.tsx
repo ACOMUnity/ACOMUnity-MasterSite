@@ -9,10 +9,11 @@ import fractal from "../../../../assets/fractal.svg";
 import blocksync from "../../../../assets/blocksync.svg";
 import cryptocom from "../../../../assets/crypto.com.svg";
 import cryptoslate from "../../../../assets/cryptoslate.svg";
+import SectionContainer from "./atoms/SectionContainer";
 
 const SectionThree: React.FC = () => {
   return (
-    <SectionThreeContainer id="partners">
+    <SectionContainer id="partners" nobg>
       <InnerContainer>
         <h3>Corporate Partners</h3>
         <LogoContainer>
@@ -43,7 +44,7 @@ const SectionThree: React.FC = () => {
           </div>
         </LogoContainer>
       </InnerContainer>
-    </SectionThreeContainer>
+    </SectionContainer>
   );
 };
 
@@ -51,7 +52,7 @@ export default SectionThree;
 
 const SectionThreeContainer = styled.div`
   width: 100%;
-  padding: 24px;
+  padding: 0 24px;
   padding-top: 128px;
 `;
 

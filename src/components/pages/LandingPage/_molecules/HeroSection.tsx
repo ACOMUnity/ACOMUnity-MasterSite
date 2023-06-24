@@ -82,7 +82,7 @@ export default HeroSection;
 
 const HeroContainer = styled.div`
   width: 100%;
-  padding: 72px 24px 0;
+  padding: 62px 24px 0;
   display: flex;
   flex-direction: column;
   gap: 64px;
