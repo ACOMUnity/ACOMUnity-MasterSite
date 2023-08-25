@@ -6,9 +6,15 @@ import { FiTwitter } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
 import TypewriterComponent from "typewriter-effect";
 
-import img from "../../../../assets/vr.png";
-import { Button } from "../../../../styles/element.styled";
-import { bounce } from "../../../../styles/animate.styled";
+import img from "../../../assets/vr.png";
+import { Button } from "../../../styles/element.styled";
+import {
+  bounce,
+  bounceIn,
+  opaque,
+  slideInLeft,
+  slideInRight,
+} from "../../../styles/animate.styled";
 
 const HeroSection: React.FC = () => {
   return (
@@ -82,7 +88,7 @@ export default HeroSection;
 
 const HeroContainer = styled.div`
   width: 100%;
-  padding: 62px 24px 0;
+  padding: 42px 24px 0;
   display: flex;
   flex-direction: column;
   gap: 64px;
@@ -107,7 +113,9 @@ const TextContent = styled.div`
   display: flex;
   margin: 0 auto;
   flex-direction: column;
+  font-family: monospace;
   gap: 24px;
+  animation: ${slideInLeft} 0.8s ease-in-out;
 
   h1 {
     font-size: 64px;
@@ -144,6 +152,7 @@ const Socials = styled.div`
   justify-content: center;
   font-size: 36px;
   gap: 20px;
+  animation: ${bounceIn} 1.8s ease-out;
 
   a {
     color: silver;
@@ -164,6 +173,14 @@ const ButtonContainer = styled.div`
   width: 100%;
   @media (max-width: 492px) {
     flex-wrap: wrap;
+  }
+
+  button:first-child {
+    animation: ${slideInRight} 0.8s ease-in;
+  }
+
+  button:last-child {
+    animation: ${opaque} 1.3s ease-in;
   }
 `;
 

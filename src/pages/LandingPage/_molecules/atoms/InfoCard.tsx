@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 
-import { ICard } from "../../../../../models/cardDetailsIInterface";
+import { ICard } from "../../../../models/cardDetailsIInterface";
 
 interface Data {
   data: ICard;

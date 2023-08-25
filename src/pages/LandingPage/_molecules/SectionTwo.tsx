@@ -2,10 +2,10 @@ import React from "react";
 import { styled } from "styled-components";
 import { GiCheckMark } from "react-icons/gi";
 
-import featGovernance from "../../../../assets/feat-decentralized.svg";
-import ecosystem from "../../../../assets/Ecosystem-amico.svg";
-import integration from "../../../../assets/integration.svg";
-import enhance from "../../../../assets/enhance.svg";
+import featGovernance from "../../../assets/feat-decentralized.svg";
+import ecosystem from "../../../assets/Ecosystem-amico.svg";
+import integration from "../../../assets/integration.svg";
+import enhance from "../../../assets/enhance.svg";
 import SectionContainer from "./atoms/SectionContainer";
 
 const SectionTwo: React.FC = () => {

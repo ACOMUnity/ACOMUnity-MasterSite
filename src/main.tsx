@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LandingPageLayout from "./components/layout/index";
 import { Global } from "./styles/global.styled";
-import LandingPage from "./components/pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 
 const router = createBrowserRouter([
   {

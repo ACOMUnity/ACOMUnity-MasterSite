@@ -12,14 +12,20 @@ const Header: React.FC = () => {
     setOpen((prev) => !prev);
   };
 
+  const [activeLink, setActiveLink] = useState("hero"); // Default active link
+
   const scrollIntoView = (id: string) => {
+    setActiveLink(id);
     const element = document.getElementById(id) as HTMLElement;
 
     element.scrollIntoView({
       behavior: "smooth",
-      inline: "nearest",
+      block: "start",
+      // inline: "nearest",
     });
   };
+
+  console.log(activeLink);
 
   return (
     <HeaderContainer>
@@ -27,11 +33,36 @@ const Header: React.FC = () => {
         <Logo />
         <NavigationDetails>
           <NavLinks>
-            <li onClick={() => scrollIntoView("hero")}>Home</li>
-            <li onClick={() => scrollIntoView("about")}>About</li>
-            <li onClick={() => scrollIntoView("features")}>Features</li>
-            <li onClick={() => scrollIntoView("partners")}>Partners</li>
-            <li onClick={() => scrollIntoView("roadmap")}>Roadmap</li>
+            <li
+              className={activeLink === "hero" ? "active" : ""}
+              onClick={() => scrollIntoView("hero")}
+            >
+              Home
+            </li>
+            <li
+              className={activeLink === "about" ? "active" : ""}
+              onClick={() => scrollIntoView("about")}
+            >
+              About
+            </li>
+            <li
+              className={activeLink === "features" ? "active" : ""}
+              onClick={() => scrollIntoView("features")}
+            >
+              Features
+            </li>
+            <li
+              className={activeLink === "partners" ? "active" : ""}
+              onClick={() => scrollIntoView("partners")}
+            >
+              Partners
+            </li>
+            <li
+              className={activeLink === "roadmap" ? "active" : ""}
+              onClick={() => scrollIntoView("roadmap")}
+            >
+              Roadmap
+            </li>
           </NavLinks>
           <CallToAction>
             <Button $type="outlined">Launch App</Button>
@@ -133,8 +164,14 @@ const NavLinks = styled.ul`
 
   > li {
     color: #fff;
-    font-weight: 16px;
+    font-weight: 400;
     cursor: pointer;
+
+    &.active {
+      color: gold;
+      font-weight: 700;
+      transition: all 0.8s ease-in;
+    }
   }
 `;
 
@@ -157,7 +194,6 @@ const ButtonOpen = styled.button`
   &.close:before,
   &.close:after {
     content: "";
-    width: 100%;
     height: 2px;
     position: absolute;
     transition: 0.3s ease;
@@ -166,14 +202,15 @@ const ButtonOpen = styled.button`
   }
 
   &.close:before {
-    top: 0;
+    top: 5px;
+    right: 0;
+    width: 80%;
   }
 
   &.close:after {
     right: 0;
-    width: 72%;
+    width: 60%;
     top: 20px;
-    right: -5px;
   }
 
   &.open:before,

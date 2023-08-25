@@ -14,11 +14,6 @@ const SectionFour: React.FC = () => {
 
 export default SectionFour;
 
-// const SectionFourContainer = styled.div`
-//   width: 100%;
-//   padding: 0 24px;
-//   padding-top: 128px;
-// `;
 const InnerContainer = styled.div`
   width: 100%;
   display: flex;

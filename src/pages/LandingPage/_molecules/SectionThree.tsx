@@ -1,14 +1,14 @@
 import React from "react";
 import { styled } from "styled-components";
 
-import coin98 from "../../../../assets/coin98.svg";
-import orion from "../../../../assets/orion.svg";
-import chainlink from "../../../../assets/chainlink.svg";
-import parsiq from "../../../../assets/parsiq.svg";
-import fractal from "../../../../assets/fractal.svg";
-import blocksync from "../../../../assets/blocksync.svg";
-import cryptocom from "../../../../assets/crypto.com.svg";
-import cryptoslate from "../../../../assets/cryptoslate.svg";
+import coin98 from "../../../assets/coin98.svg";
+import orion from "../../../assets/orion.svg";
+import chainlink from "../../../assets/chainlink.svg";
+import parsiq from "../../../assets/parsiq.svg";
+import fractal from "../../../assets/fractal.svg";
+import blocksync from "../../../assets/blocksync.svg";
+import cryptocom from "../../../assets/crypto.com.svg";
+import cryptoslate from "../../../assets/cryptoslate.svg";
 import SectionContainer from "./atoms/SectionContainer";
 
 const SectionThree: React.FC = () => {
@@ -49,12 +49,6 @@ const SectionThree: React.FC = () => {
 };
 
 export default SectionThree;
-
-const SectionThreeContainer = styled.div`
-  width: 100%;
-  padding: 0 24px;
-  padding-top: 128px;
-`;
 
 const InnerContainer = styled.div`
   width: 100%;

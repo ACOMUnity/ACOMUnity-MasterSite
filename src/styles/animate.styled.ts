@@ -13,19 +13,14 @@ export const slideInDown = keyframes`
       -ms-transform: translateY(0);
       transform: translateY(0);
     }
-  
-  /* .slideInDown {
-    -webkit-animation-name: slideInDown;
-    animation-name: slideInDown;
-  } */
+
   `;
 
 export const slideInLeft = keyframes`
     0% {
-      opacity: 0;
-      -webkit-transform: translateX(-2000px);
-      -ms-transform: translateX(-2000px);
-      transform: translateX(-2000px);
+      -webkit-transform: translateX(-100px);
+      -ms-transform: translateX(-100px);
+      transform: translateX(-100px);
     }
   
     100% {
@@ -42,10 +37,9 @@ export const slideInLeft = keyframes`
 
 export const slideInRight = keyframes`
     0% {
-      opacity: 0;
-      -webkit-transform: translateX(2000px);
-      -ms-transform: translateX(2000px);
-      transform: translateX(2000px);
+      -webkit-transform: translateX(100px);
+      -ms-transform: translateX(100px);
+      transform: translateX(100px);
     }
   
     100% {
@@ -140,7 +134,7 @@ export const bounce2 = keyframes`
 
 export const bounceIn = keyframes`
     0% {
-      opacity: 0;
+      /* opacity: 0; */
       -webkit-transform: scale(.3);
       -ms-transform: scale(.3);
       transform: scale(.3);
@@ -170,3 +164,13 @@ export const bounceIn = keyframes`
 //     -webkit-animation-name: bounceIn;
 //     animation-name: bounceIn;
 //   }
+
+export const opaque = keyframes`
+ 0%{
+    opacity: 0;
+ }
+
+ 100% {
+  opacity: 1;
+ }
+`;

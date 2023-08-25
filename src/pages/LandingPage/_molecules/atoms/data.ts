@@ -2,7 +2,7 @@ import { GrConnect } from "react-icons/gr";
 import { GiUnionJack } from "react-icons/gi";
 import { TbBuildingCommunity } from "react-icons/tb";
 
-import { ICard } from "../../../../../models/cardDetailsIInterface";
+import { ICard } from "../../../../models/cardDetailsIInterface";
 
 export const data: ICard[] = [
   {
