@@ -23,6 +23,10 @@ export default Heading;
 const HeadingContainer = styled.div`
   width: 100%;
   padding-top: 64px;
+
+  @media (max-width: 580px) {
+    padding-top: 24px;
+  }
 `;
 
 const InnerContainer = styled.div`

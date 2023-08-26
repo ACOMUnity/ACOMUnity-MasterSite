@@ -29,6 +29,7 @@ const AppContainer = styled.div`
   padding: 24px 64px;
   @media (max-width: 580px) {
     padding: 24px;
+    height: auto;
   }
 `;
 

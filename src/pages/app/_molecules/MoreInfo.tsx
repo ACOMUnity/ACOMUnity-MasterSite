@@ -23,6 +23,7 @@ export default MoreInfo;
 const MoreInfoContainer = styled.div`
   width: 100%;
   padding-top: 42px;
+  padding-bottom: 42px;
   animation: ${opaque} 0.8s ease-in-out;
 `;
 
