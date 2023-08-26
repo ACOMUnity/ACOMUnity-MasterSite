@@ -80,10 +80,13 @@ export const SubTitle = styled.h6`
   }
 `;
 
+type Type = "text" | "outlined";
+
 type IBtn = {
   fullwidth?: string;
-  $elevated?: string;
-  $type?: string;
+  $elevated?: boolean;
+  $type?: Type;
+  $font?: string;
   disabled?: boolean;
 };
 
@@ -97,10 +100,11 @@ export const Button = styled.button<IBtn>`
   border-radius: 6px;
   padding: 16px 24px;
   min-width: 100px;
+  text-transform: capitalize;
   width: ${(props) => (props.fullwidth === "true" ? "100%" : null)};
   min-height: 38px;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: ${({ $font }) => ($font ? $font : "14px")};
+  font-weight: 500;
   transition: ease-in 0.3s;
   cursor: pointer;
 

@@ -7,6 +7,7 @@ const SectionFour: React.FC = () => {
     <SectionContainer id="roadmap" nobg>
       <InnerContainer>
         <h3>RoadMap</h3>
+        <p>Coming soon...</p>
       </InnerContainer>
     </SectionContainer>
   );
@@ -21,10 +22,14 @@ const InnerContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 64px;
+  padding-bottom: 128px;
 
   h3 {
     font-size: 28px;
     letter-spacing: 7px;
     text-align: center;
+  }
+  p {
+    font-size: 24px;
   }
 `;

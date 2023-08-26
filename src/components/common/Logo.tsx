@@ -5,9 +5,8 @@ const Logo: React.FC = () => {
   return (
     <LogoContainer>
       <p>
-        L<span>o</span>
-        <span>g</span>
-        <span>o</span>
+        ACOM<span>un</span>
+        <span>ity</span>
       </p>
     </LogoContainer>
   );
@@ -18,7 +17,7 @@ export default Logo;
 const LogoContainer = styled.div`
   p {
     font-size: 28px;
-    color: purple;
+    color: gold;
     font-weight: 700;
     margin: 0;
 
@@ -31,7 +30,7 @@ const LogoContainer = styled.div`
     }
 
     span:nth-child(2) {
-      color: gold;
+      color: purple;
     }
 
     span:nth-child(3) {

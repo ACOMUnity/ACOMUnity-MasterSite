@@ -46,6 +46,8 @@ h1 {
 
 ul, ol {
         list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
 
     input {

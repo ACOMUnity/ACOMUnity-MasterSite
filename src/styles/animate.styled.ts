@@ -2,10 +2,9 @@ import { keyframes } from "styled-components";
 
 export const slideInDown = keyframes`
     0% {
-      opacity: 0;
-      -webkit-transform: translateY(-2000px);
-      -ms-transform: translateY(-2000px);
-      transform: translateY(-2000px);
+      -webkit-transform: translateY(-32px);
+      -ms-transform: translateY(-32px);
+      transform: translateY(-32px);
     }
   
     100% {

@@ -1,5 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
+
 import { RxDiscordLogo } from "react-icons/rx";
 import { TbBrandTelegram, TbBrandReddit } from "react-icons/tb";
 import { FiTwitter } from "react-icons/fi";
@@ -50,7 +52,7 @@ const HeroSection: React.FC = () => {
           <ButtonContainer>
             <Button fullwidth="true">Features</Button>
             <Button $type="outlined" fullwidth="true">
-              Launch App
+              <Link to="/app">Launch App</Link>
             </Button>
           </ButtonContainer>
         </CallToActionContainer>
@@ -181,6 +183,9 @@ const ButtonContainer = styled.div`
 
   button:last-child {
     animation: ${opaque} 1.3s ease-in;
+    a {
+      color: inherit;
+    }
   }
 `;
 

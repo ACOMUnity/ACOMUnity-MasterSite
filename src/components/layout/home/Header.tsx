@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
 
-import Logo from "../common/Logo";
-import { Button } from "../../styles/element.styled";
+import Logo from "../../common/Logo";
+import { Button } from "../../../styles/element.styled";
+import { Link } from "react-router-dom";
 
 type OpenNav = boolean;
 
@@ -65,7 +66,9 @@ const Header: React.FC = () => {
             </li>
           </NavLinks>
           <CallToAction>
-            <Button $type="outlined">Launch App</Button>
+            <Link to="/app">
+              <Button $type="outlined">Launch App</Button>
+            </Link>
           </CallToAction>
         </NavigationDetails>
         <ButtonOpen
@@ -116,9 +119,11 @@ const Header: React.FC = () => {
           >
             Roadmap
           </li>
-          <Button $type="outlined" fullwidth="true">
-            Launch App
-          </Button>
+          <Link to="/app">
+            <Button $type="outlined" fullwidth="true">
+              Launch App
+            </Button>
+          </Link>
         </ul>
       </Nav>
     </HeaderContainer>

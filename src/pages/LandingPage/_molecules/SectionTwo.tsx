@@ -167,11 +167,17 @@ const InnerContentBox = styled.div`
   flex-direction: column;
   gap: 84px;
   margin: 0 auto;
+
+  @media (max-width: 870px) {
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const InnerContent = styled.div`
   display: flex;
   gap: 64px;
+  width: 100%;
   align-items: flex-start;
   justify-content: space-between;
   gap: 32px;
@@ -243,7 +249,7 @@ const Entry = styled.div`
     width: 550px;
 
     @media (max-width: 550px) {
-      width: 300px;
+      width: 100%;
     }
   }
 

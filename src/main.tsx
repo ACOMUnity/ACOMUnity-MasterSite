@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import LandingPageLayout from "./components/layout/index";
+import LandingPageLayout from "./components/layout/home/index";
 import { Global } from "./styles/global.styled";
 import LandingPage from "./pages/LandingPage";
+import AppLayout from "./components/layout/app";
+import App from "./pages/app";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +16,17 @@ const router = createBrowserRouter([
         index: true,
         path: "",
         element: <LandingPage />,
+      },
+    ],
+  },
+  {
+    path: "/app",
+    element: <AppLayout />,
+    children: [
+      {
+        index: true,
+        path: "",
+        element: <App />,
       },
     ],
   },

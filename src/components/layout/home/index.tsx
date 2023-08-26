@@ -20,7 +20,6 @@ const LandingPageLayout: React.FC = () => {
 export default LandingPageLayout;
 
 const Container = styled.div`
-  /* padding: 24px; */
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
