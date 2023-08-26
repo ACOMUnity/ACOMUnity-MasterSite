@@ -1,19 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { styled } from "styled-components";
-import { AiOutlineWallet } from "react-icons/ai";
 
 import Logo from "../../common/Logo";
 import { Button } from "../../../styles/element.styled";
-import { Link } from "react-router-dom";
-
-type OpenNav = boolean;
 
 const Header: React.FC = () => {
-  const [open, setOpen] = useState<OpenNav>(false);
-  const handleToggle = () => {
-    setOpen((prev) => !prev);
-  };
-
   return (
     <HeaderContainer>
       <HeaderDetails>
