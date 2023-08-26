@@ -42,69 +42,69 @@ const HeaderDetails = styled.div`
   align-items: center;
 `;
 
-const ButtonOpen = styled.button`
-  display: none;
-  z-index: 999;
-  width: 42px;
-  height: 30px;
-  background: none;
-  position: relative;
+// const ButtonOpen = styled.button`
+//   display: none;
+//   z-index: 999;
+//   width: 42px;
+//   height: 30px;
+//   background: none;
+//   position: relative;
 
-  /* margin-top: 1rem; */
-  color: gold;
-  border: none;
+//   /* margin-top: 1rem; */
+//   color: gold;
+//   border: none;
 
-  @media (max-width: 716px) {
-    display: inline-flex;
-  }
+//   @media (max-width: 716px) {
+//     display: inline-flex;
+//   }
 
-  &.close:before,
-  &.close:after {
-    content: "";
-    height: 2px;
-    position: absolute;
-    transition: 0.3s ease;
-    transform: rotate(0deg);
-    background-color: gold;
-  }
+//   &.close:before,
+//   &.close:after {
+//     content: "";
+//     height: 2px;
+//     position: absolute;
+//     transition: 0.3s ease;
+//     transform: rotate(0deg);
+//     background-color: gold;
+//   }
 
-  &.close:before {
-    top: 5px;
-    right: 0;
-    width: 80%;
-  }
+//   &.close:before {
+//     top: 5px;
+//     right: 0;
+//     width: 80%;
+//   }
 
-  &.close:after {
-    right: 0;
-    width: 60%;
-    top: 20px;
-  }
+//   &.close:after {
+//     right: 0;
+//     width: 60%;
+//     top: 20px;
+//   }
 
-  &.open:before,
-  &.open:after {
-    content: "";
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    transition: 0.3s ease;
-    /* transform: rotate(0deg); */
-    background-color: gold;
-  }
+//   &.open:before,
+//   &.open:after {
+//     content: "";
+//     width: 100%;
+//     height: 2px;
+//     position: absolute;
+//     transition: 0.3s ease;
+//     /* transform: rotate(0deg); */
+//     background-color: gold;
+//   }
 
-  &.open:before {
-    top: 16.5px;
-    right: -6.5px;
-    width: 75%;
-    transform: rotate(45deg);
-  }
+//   &.open:before {
+//     top: 16.5px;
+//     right: -6.5px;
+//     width: 75%;
+//     transform: rotate(45deg);
+//   }
 
-  &.open:after {
-    right: -7px;
-    top: 16px;
-    width: 75%;
-    transform: rotate(-45deg);
-  }
-`;
+//   &.open:after {
+//     right: -7px;
+//     top: 16px;
+//     width: 75%;
+//     transform: rotate(-45deg);
+//   }
+// `;
 
 const ConnectButton = styled.div`
   button {
