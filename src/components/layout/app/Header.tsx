@@ -9,7 +9,7 @@ import { Button } from "../../../styles/element.styled";
 import { shortenAddress } from "../../../utils/shortenAddress";
 
 const AppHeader: React.FC = () => {
-  const { open, close } = useWeb3Modal();
+  const { open } = useWeb3Modal();
   const { address, isConnected } = useAccount();
 
   return (

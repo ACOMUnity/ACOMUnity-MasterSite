@@ -4,7 +4,6 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LandingPageLayout from "./components/layout/index";
 import { Global } from "./styles/global.styled";
 import LandingPage from "./pages/LandingPage";
-import AppLayout from "./components/layout/app";
 import App from "./pages/app";
 
 const router = createBrowserRouter([
