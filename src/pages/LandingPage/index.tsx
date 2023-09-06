@@ -13,7 +13,7 @@ const LandingPage: React.FC = () => {
       <SectionContainer>
         <SectionOne />
         <SectionTwo />
-        <SectionThree />
+        {/* <SectionThree /> */}
         <SectionFour />
       </SectionContainer>
     </PageContainer>
