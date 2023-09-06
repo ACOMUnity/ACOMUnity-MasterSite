@@ -193,6 +193,7 @@ const InnerContent = styled.div`
       flex-direction: column;
     }
     flex-direction: column;
+    align-items: center;
   }
 `;
 

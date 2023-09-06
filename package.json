@@ -10,12 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@web3modal/ethereum": "^2.7.1",
+    "@web3modal/react": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.13.0",
     "styled-components": "^6.0.0-rc.3",
-    "typewriter-effect": "^2.20.1"
+    "typewriter-effect": "^2.20.1",
+    "viem": "^1.10.4",
+    "wagmi": "^1.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",

@@ -64,14 +64,17 @@ ul, ol {
     /* Typograhy */
     p {
         font-size: 18px;
+        margin:0;
     }
 
     span {
         font-size: 14px;
+        margin:0;
     }
 
     small {
         font-size: 12px;
+        margin:0;
     }
 
    

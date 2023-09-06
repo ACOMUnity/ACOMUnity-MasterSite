@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import { slideInDown } from "../../../styles/animate.styled";
 
 const Timer: React.FC = () => {
-  const COUNT_DOWN_DATE = new Date(1694164803000);
+  const COUNT_DOWN_DATE = new Date(1694695885000);
   const [timeRemaining, setTimeRemaining] = useState<number>();
 
   useEffect(() => {

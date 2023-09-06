@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import LandingPageLayout from "./components/layout/home/index";
+import LandingPageLayout from "./components/layout/index";
 import { Global } from "./styles/global.styled";
 import LandingPage from "./pages/LandingPage";
 import AppLayout from "./components/layout/app";
@@ -17,19 +17,23 @@ const router = createBrowserRouter([
         path: "",
         element: <LandingPage />,
       },
-    ],
-  },
-  {
-    path: "/app",
-    element: <AppLayout />,
-    children: [
       {
-        index: true,
-        path: "",
+        path: "/app",
         element: <App />,
       },
     ],
   },
+  // {
+  //   path: "/",
+  //   element: <AppLayout />,
+  //   children: [
+  //     {
+  //       index: true,
+  //       path: "",
+  //       element: <App />,
+  //     },
+  //   ],
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

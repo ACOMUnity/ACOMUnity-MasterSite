@@ -1,28 +1,39 @@
 import React from "react";
 import { styled } from "styled-components";
+import { useWeb3Modal } from "@web3modal/react";
+import { useAccount } from "wagmi";
+import { AiOutlineWallet } from "react-icons/ai";
 
 import Logo from "../../common/Logo";
 import { Button } from "../../../styles/element.styled";
+import { shortenAddress } from "../../../utils/shortenAddress";
 
-const Header: React.FC = () => {
+const AppHeader: React.FC = () => {
+  const { open, close } = useWeb3Modal();
+  const { address, isConnected } = useAccount();
+
   return (
     <HeaderContainer>
       <HeaderDetails>
         <Logo />
-        <ConnectButton>
-          <Button $type="outlined">connect wallet</Button>
-        </ConnectButton>
-        {/* <ButtonOpen
-          type="button"
-          onClick={handleToggle}
-          className={open ? "open" : "close"}
-        ></ButtonOpen> */}
+        {isConnected ? (
+          <Connected>
+            <AiOutlineWallet />
+            <p>{shortenAddress(address as string)}</p>
+          </Connected>
+        ) : (
+          <ConnectButton>
+            <Button onClick={() => open()} $type="outlined">
+              connect wallet
+            </Button>
+          </ConnectButton>
+        )}
       </HeaderDetails>
     </HeaderContainer>
   );
 };
 
-export default Header;
+export default AppHeader;
 
 const HeaderContainer = styled.div`
   width: 100%;
@@ -42,70 +53,6 @@ const HeaderDetails = styled.div`
   align-items: center;
 `;
 
-// const ButtonOpen = styled.button`
-//   display: none;
-//   z-index: 999;
-//   width: 42px;
-//   height: 30px;
-//   background: none;
-//   position: relative;
-
-//   /* margin-top: 1rem; */
-//   color: gold;
-//   border: none;
-
-//   @media (max-width: 716px) {
-//     display: inline-flex;
-//   }
-
-//   &.close:before,
-//   &.close:after {
-//     content: "";
-//     height: 2px;
-//     position: absolute;
-//     transition: 0.3s ease;
-//     transform: rotate(0deg);
-//     background-color: gold;
-//   }
-
-//   &.close:before {
-//     top: 5px;
-//     right: 0;
-//     width: 80%;
-//   }
-
-//   &.close:after {
-//     right: 0;
-//     width: 60%;
-//     top: 20px;
-//   }
-
-//   &.open:before,
-//   &.open:after {
-//     content: "";
-//     width: 100%;
-//     height: 2px;
-//     position: absolute;
-//     transition: 0.3s ease;
-//     /* transform: rotate(0deg); */
-//     background-color: gold;
-//   }
-
-//   &.open:before {
-//     top: 16.5px;
-//     right: -6.5px;
-//     width: 75%;
-//     transform: rotate(45deg);
-//   }
-
-//   &.open:after {
-//     right: -7px;
-//     top: 16px;
-//     width: 75%;
-//     transform: rotate(-45deg);
-//   }
-// `;
-
 const ConnectButton = styled.div`
   button {
     display: flex;
@@ -113,5 +60,23 @@ const ConnectButton = styled.div`
     svg {
       font-size: 24px;
     }
+  }
+`;
+
+const Connected = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border: 3px solid gold;
+  border-radius: 50px;
+  cursor: pointer;
+
+  svg {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
   }
 `;

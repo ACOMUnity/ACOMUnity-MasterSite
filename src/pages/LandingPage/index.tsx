@@ -10,12 +10,12 @@ const LandingPage: React.FC = () => {
   return (
     <PageContainer>
       <HeroSection />
-      <>
+      <SectionContainer>
         <SectionOne />
         <SectionTwo />
         <SectionThree />
         <SectionFour />
-      </>
+      </SectionContainer>
     </PageContainer>
   );
 };
@@ -26,4 +26,8 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   /* gap: 128px; */
+`;
+
+const SectionContainer = styled.div`
+  padding-bottom: 148px;
 `;

@@ -1,7 +1,8 @@
 import React from "react";
 import { styled } from "styled-components";
-import Timer from "./_molecules/Timer";
+
 import Heading from "./_molecules/Heading";
+import Timer from "./_molecules/Timer";
 import MoreInfo from "./_molecules/MoreInfo";
 
 const App: React.FC = () => {
