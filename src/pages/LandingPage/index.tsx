@@ -3,7 +3,7 @@ import HeroSection from "./_molecules/HeroSection";
 import SectionOne from "./_molecules/SectionOne";
 import { styled } from "styled-components";
 import SectionTwo from "./_molecules/SectionTwo";
-import SectionThree from "./_molecules/SectionThree";
+// import SectionThree from "./_molecules/SectionThree";
 import SectionFour from "./_molecules/SectionFour";
 
 const LandingPage: React.FC = () => {
