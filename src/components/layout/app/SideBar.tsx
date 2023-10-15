@@ -102,11 +102,6 @@ const NavLinks = styled.nav`
       gap: 8px;
       font-family: "roboto mono";
 
-      &.active {
-        color: gold;
-        font-weight: 800;
-      }
-
       > svg {
         font-size: 22px;
       }
@@ -115,6 +110,17 @@ const NavLinks = styled.nav`
         font-size: 16px;
         font-family: 400;
         text-transform: capitalize;
+      }
+
+      &.active {
+        color: gold;
+        > p {
+          font-weight: 800;
+        }
+
+        > svg {
+          font-size: 22px;
+        }
       }
     }
   }
