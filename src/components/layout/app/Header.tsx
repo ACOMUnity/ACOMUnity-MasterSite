@@ -3,8 +3,6 @@ import { styled } from "styled-components";
 import { useWeb3Modal } from "@web3modal/react";
 import { useAccount } from "wagmi";
 import { AiOutlineWallet } from "react-icons/ai";
-
-import Logo from "../../common/Logo";
 import { Button } from "../../../styles/element.styled";
 import { shortenAddress } from "../../../utils/shortenAddress";
 
@@ -15,7 +13,6 @@ const AppHeader: React.FC = () => {
   return (
     <HeaderContainer>
       <HeaderDetails>
-        <Logo />
         {isConnected ? (
           <Connected>
             <AiOutlineWallet />
@@ -40,7 +37,7 @@ const HeaderContainer = styled.div`
   position: sticky;
   top: 0;
   background-color: rgb(4, 8, 16);
-  z-index: 99999;
+  z-index: 9;
   padding: 24px 64px;
   @media (max-width: 580px) {
     padding: 24px;
@@ -51,9 +48,14 @@ const HeaderDetails = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 `;
 
 const ConnectButton = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+
   button {
     display: flex;
 

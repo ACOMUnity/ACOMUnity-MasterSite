@@ -2,18 +2,29 @@ import React from "react";
 import { styled } from "styled-components";
 
 import Heading from "./_molecules/Heading";
-import Timer from "./_molecules/Timer";
-import MoreInfo from "./_molecules/MoreInfo";
+import AppHeader from "../../components/layout/app/Header";
+import SaleCard from "./_molecules/SaleCard";
+import { salesData } from "./_molecules/salesData";
 
 const App: React.FC = () => {
   return (
-    <AppContainer>
-      <InnerContainer>
-        <Heading />
-        <Timer />
-        <MoreInfo />
-      </InnerContainer>
-    </AppContainer>
+    <>
+      <AppHeader />
+      <AppContainer>
+        <InnerContainer>
+          <Heading />
+          <SaleContainer>
+            {salesData.map(
+              (sale: { phase: string; title: string; link: string }) => (
+                <SaleCard key={sale.link} sales={sale} />
+              )
+            )}
+          </SaleContainer>
+          {/* <Timer /> */}
+          {/* <MoreInfo /> */}
+        </InnerContainer>
+      </AppContainer>
+    </>
   );
 };
 
@@ -35,5 +46,15 @@ const AppContainer = styled.div`
 `;
 
 const InnerContainer = styled.div`
-  max-width: 740px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 82px;
+`;
+
+const SaleContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 64px;
 `;

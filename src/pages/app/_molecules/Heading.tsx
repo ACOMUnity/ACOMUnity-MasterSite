@@ -7,11 +7,12 @@ const Heading: React.FC = () => {
     <HeadingContainer>
       <InnerContainer>
         <h1>
-          <span>ACOM</span> sale live in:
+          <span>AGEMS</span> Token Sale Journey: Unveiling Four Distinct Phases
         </h1>
         <span>
-          ACOM is the token that will fuel the entire DAO. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Nulla ea quasi consectetur eaque
+          We are thrilled to introduce the AGEMS token sale, meticulously
+          segmented into four distinct phases, each representing a crucial
+          chapter in our journey.
         </span>
       </InnerContainer>
     </HeadingContainer>
@@ -22,7 +23,7 @@ export default Heading;
 
 const HeadingContainer = styled.div`
   width: 100%;
-  padding-top: 64px;
+  /* padding-top: 64px; */
 
   @media (max-width: 580px) {
     padding-top: 24px;
@@ -31,10 +32,16 @@ const HeadingContainer = styled.div`
 
 const InnerContainer = styled.div`
   width: 100%;
+  background-color: gold;
+  color: #000;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding: 24px;
+  border-top-right-radius: 14px;
+  border-bottom-left-radius: 14px;
   animation: ${slideInRight} 0.8s ease-in-out;
+  padding-top: 24px;
 
   h1 {
     margin: 0;
