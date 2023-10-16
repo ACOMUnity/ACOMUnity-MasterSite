@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             </li>
           </NavLinks>
           <CallToAction>
-            <Link to="/app">
+            <Link to="/app/dashboard">
               <Button $type="outlined">Launch App</Button>
             </Link>
           </CallToAction>

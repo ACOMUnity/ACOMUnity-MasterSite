@@ -12,7 +12,11 @@ const SideBar = () => {
     <SideBarMainContainer>
       <SideContainer>
         <InnerContent>
-          <HeaderContainer>Acomunity</HeaderContainer>
+          <HeaderContainer>
+            <ImageContainer>
+              <img src="/acom.png" alt="acom logo" />
+            </ImageContainer>
+          </HeaderContainer>
           <NavLinks>
             <ul>
               <li className="active">
@@ -59,7 +63,8 @@ const SideContainer = styled.div`
   padding: 2.4rem 0;
   display: flex;
   width: 240px;
-  background: #2e3c72;
+  /* background: #2e3c72; */
+  background: #02253d;
   height: calc(100vh - 32px);
   transition-duration: 0.15s;
   transition-property: width;
@@ -78,7 +83,7 @@ const InnerContent = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 4.8rem;
+  gap: 18px;
 `;
 
 const HeaderContainer = styled.div`
@@ -123,5 +128,13 @@ const NavLinks = styled.nav`
         }
       }
     }
+  }
+`;
+
+const ImageContainer = styled.div`
+  width: 100%;
+
+  > img {
+    width: 100%;
   }
 `;

@@ -2,26 +2,30 @@ import React from "react";
 import { styled } from "styled-components";
 
 import Heading from "./_molecules/Heading";
-import AppHeader from "../../components/layout/app/Header";
 import SaleCard from "./_molecules/SaleCard";
 import { salesData } from "./_molecules/salesData";
 
 const App: React.FC = () => {
   return (
     <>
-      <AppHeader />
       <AppContainer>
         <InnerContainer>
           <Heading />
           <SaleContainer>
             {salesData.map(
-              (sale: { phase: string; title: string; link: string }) => (
-                <SaleCard key={sale.link} sales={sale} />
+              (
+                sale: {
+                  phase: string;
+                  title: string;
+                  link: string;
+                  startTime: number;
+                },
+                i
+              ) => (
+                <SaleCard key={i} sales={sale} />
               )
             )}
           </SaleContainer>
-          {/* <Timer /> */}
-          {/* <MoreInfo /> */}
         </InnerContainer>
       </AppContainer>
     </>

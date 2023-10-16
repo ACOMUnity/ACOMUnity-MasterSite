@@ -6,11 +6,12 @@ import HomeLayout from "./components/layout/home";
 import App from "./pages/app";
 import LandingPage from "./pages/LandingPage";
 import AppLayout from "./components/layout/app";
+import Phase from "./pages/app/phase";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <HomeLayout />,
+    path: "/",
     children: [
       {
         path: "",
@@ -19,12 +20,16 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/app",
     element: <AppLayout />,
+    path: "/",
     children: [
       {
-        path: "",
+        path: "app/dashboard",
         element: <App />,
+      },
+      {
+        path: "app/dashboard/:phase",
+        element: <Phase />,
       },
     ],
   },

@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { slideInDown } from "../../../styles/animate.styled";
 
-const Timer: React.FC = () => {
-  const COUNT_DOWN_DATE = new Date(1694695885000);
+interface IProps {
+  timerNum: number;
+}
+const Timer = ({ timerNum }: IProps) => {
+  const COUNT_DOWN_DATE = new Date(timerNum);
   const [timeRemaining, setTimeRemaining] = useState<number>();
 
   useEffect(() => {
@@ -17,6 +20,7 @@ const Timer: React.FC = () => {
   }, []);
 
   const handleTime = () => {
+    if (timerNum === 0) return;
     if (!timeRemaining) return;
     const days =
       String(Math.floor(timeRemaining / 86400)).length === 1

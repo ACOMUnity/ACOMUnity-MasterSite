@@ -10,6 +10,7 @@ import { Web3Modal } from "@web3modal/react";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { arbitrum, mainnet, polygon } from "wagmi/chains";
 import SideBar from "./SideBar";
+import AppHeader from "./Header";
 
 const chains = [arbitrum, mainnet, polygon];
 const projectId = import.meta.env.VITE_WALLETCONNECT_KEY;
@@ -29,7 +30,10 @@ const AppLayout: React.FC = () => {
         <Container>
           <InnerContainer>
             <SideBar />
-            <Main>{<Outlet />}</Main>
+            <Main>
+              <AppHeader />
+              <Outlet />
+            </Main>
           </InnerContainer>
         </Container>
       </WagmiConfig>
