@@ -57,4 +57,5 @@ const SaleContainer = styled.div`
   flex-wrap: wrap;
   gap: 24px;
   margin-bottom: 64px;
+  row-gap: 48px;
 `;

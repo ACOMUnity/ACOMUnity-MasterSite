@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import { Button } from "../../../styles/element.styled";
 
 interface ISale {
   phase: string;
@@ -19,6 +20,7 @@ const SaleCard = ({ sales }: IProps) => {
       </Title>
       <Body>
         <Link to={sales.link}>view details &rarr;</Link>
+        <Button disabled>Coming Soon</Button>
       </Body>
     </MainContainer>
   );
@@ -59,10 +61,16 @@ const Title = styled.div`
 `;
 
 const Body = styled.div`
-  height: 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 
   a {
     color: #000;
     text-transform: capitalize;
+  }
+
+  > button {
+    width: 100%;
   }
 `;

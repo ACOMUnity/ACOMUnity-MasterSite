@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "styled-components";
 import { useWeb3Modal } from "@web3modal/react";
 import { useAccount } from "wagmi";
-import { AiOutlineWallet } from "react-icons/ai";
+import { RxExit } from "react-icons/rx";
 import { Button } from "../../../styles/element.styled";
 import { shortenAddress } from "../../../utils/shortenAddress";
 
@@ -14,10 +14,15 @@ const AppHeader: React.FC = () => {
     <HeaderContainer>
       <HeaderDetails>
         {isConnected ? (
-          <Connected>
-            <AiOutlineWallet />
-            <p>{shortenAddress(address as string)}</p>
-          </Connected>
+          <ConnectButton>
+            <p>0.00 AGEMS</p>
+            <Connected>
+              {/* <AiOutlineWallet /> */}
+              <p>prince.eth</p>
+              <small>{shortenAddress(address as string)}</small>
+            </Connected>
+            <RxExit />
+          </ConnectButton>
         ) : (
           <ConnectButton>
             <Button onClick={() => open()} $type="outlined">
@@ -55,6 +60,7 @@ const ConnectButton = styled.div`
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  gap: 38px;
 
   button {
     display: flex;
@@ -63,15 +69,21 @@ const ConnectButton = styled.div`
       font-size: 24px;
     }
   }
+
+  > svg {
+    font-size: 20px;
+    margin-top: 8px;
+  }
 `;
 
 const Connected = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 14px 24px;
-  border: 3px solid gold;
-  border-radius: 50px;
+  flex-direction: column;
+  gap: 2px;
+  /* padding: 14px 24px; */
+  /* border: 3px solid gold;
+  border-radius: 50px; */
   cursor: pointer;
 
   svg {
@@ -79,6 +91,10 @@ const Connected = styled.div`
   }
 
   p {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  small {
+    font-size: 14px;
   }
 `;
