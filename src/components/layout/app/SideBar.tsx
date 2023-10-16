@@ -63,8 +63,8 @@ const SideContainer = styled.div`
   padding: 2.4rem 0;
   display: flex;
   width: 240px;
-  /* background: #2e3c72; */
-  background: #02253d;
+  background: #2e3c72;
+  /* background: #02253d; */
   height: calc(100vh - 32px);
   transition-duration: 0.15s;
   transition-property: width;
