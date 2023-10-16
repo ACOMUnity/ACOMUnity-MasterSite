@@ -14,7 +14,8 @@ const SideBar = () => {
         <InnerContent>
           <HeaderContainer>
             <ImageContainer>
-              <img src="/acom.png" alt="acom logo" />
+              {/* <img src="/acom.png" alt="acom logo" /> */}
+              Acomunity
             </ImageContainer>
           </HeaderContainer>
           <NavLinks>
@@ -64,7 +65,8 @@ const SideContainer = styled.div`
   display: flex;
   width: 240px;
   background: #2e3c72;
-  /* background: #02253d; */
+  /* background: rgb(16, 17, 35); */
+  /* border-right: 2px solid #110295; */
   height: calc(100vh - 32px);
   transition-duration: 0.15s;
   transition-property: width;

@@ -32,8 +32,10 @@ const HeadingContainer = styled.div`
 
 const InnerContainer = styled.div`
   width: 100%;
-  background-color: gold;
-  color: #000;
+  /* background: linear-gradient(220deg, rgb(16, 17, 35), #110295); */
+  background: linear-gradient(220deg, gold, #110295);
+  box-shadow: 0px 4px 4px 4px #18255d;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -47,7 +49,7 @@ const InnerContainer = styled.div`
     margin: 0;
 
     span {
-      text-shadow: rgb(255, 215, 0) 0px 2px 12px;
+      text-shadow: rgb(255, 215, 0) 0px 4px 4px;
       font-size: 64px;
       font-family: monospace;
     }
