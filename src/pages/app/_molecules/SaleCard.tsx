@@ -21,7 +21,6 @@ const SaleCard = ({ sales }: IProps) => {
         <p>{sales.title}</p>
       </Title>
       <Body>
-        <Link to={sales.link}>view details &rarr;</Link>
         <Button disabled={!sales.startTime}>
           {sales.startTime > 0 ? "Participate" : "Coming Soon"}
         </Button>
@@ -34,19 +33,27 @@ export default SaleCard;
 
 const MainContainer = styled(Link)`
   max-width: 340px;
-  /* border: 1px solid gold; */
   padding: 18px;
   display: flex;
   flex-direction: column;
+  border: 1px solid #3e3e3a;
   gap: 36px;
-  background-color: rgba(255, 255, 255, 1);
+  background: transparent;
   border-radius: 12px;
-  box-shadow: 4px 4px 8px #dfd261;
+  box-shadow: 4px 8px 8px #3e3e3a;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    box-shadow: 2px 2px 4px #3e3e3a;
+    transition: all 0.3s ease-in;
+  }
 `;
 
 const Title = styled.div`
   width: 100%;
   background-color: #2e3c72;
+  /* background: linear-gradient(120deg, gold, #110295); */
+  /* background-color: #110295; */
   padding: 24px;
   display: flex;
   flex-direction: column;

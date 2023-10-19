@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import { useWeb3Modal } from "@web3modal/react";
-import { useAccount } from "wagmi";
+import { useAccount, useDisconnect } from "wagmi";
 import { RxExit } from "react-icons/rx";
 import { Button } from "../../../styles/element.styled";
 import { shortenAddress } from "../../../utils/shortenAddress";
@@ -9,6 +9,7 @@ import { shortenAddress } from "../../../utils/shortenAddress";
 const AppHeader: React.FC = () => {
   const { open } = useWeb3Modal();
   const { address, isConnected } = useAccount();
+  const { disconnect } = useDisconnect();
 
   return (
     <HeaderContainer>
@@ -21,7 +22,10 @@ const AppHeader: React.FC = () => {
               <p>prince.eth</p>
               <small>{shortenAddress(address as string)}</small>
             </Connected>
-            <RxExit />
+            <RxExit
+              style={{ cursor: "pointer" }}
+              onClick={() => disconnect()}
+            />
           </ConnectButton>
         ) : (
           <ConnectButton>
