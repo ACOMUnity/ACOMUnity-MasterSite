@@ -64,8 +64,8 @@ const InnerContainer = styled.div`
       height: 3.6rem;
 
       @media (max-width: 420px) {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2.8rem;
+        height: 2.8rem;
       }
     }
   }
