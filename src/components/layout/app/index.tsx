@@ -11,6 +11,7 @@ import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { arbitrum, mainnet, polygon } from "wagmi/chains";
 import SideBar from "./SideBar";
 import AppHeader from "./Header";
+import MobileNav from "./MobileNav";
 
 const chains = [arbitrum, mainnet, polygon];
 const projectId = import.meta.env.VITE_WALLETCONNECT_KEY;
@@ -34,6 +35,7 @@ const AppLayout: React.FC = () => {
               <AppHeader />
               <Outlet />
             </Main>
+            <MobileNav />
           </InnerContainer>
         </Container>
       </WagmiConfig>

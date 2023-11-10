@@ -1,7 +1,9 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { phaseMaps } from "../_molecules/salesData";
-import Timer from "../_molecules/Timer";
+import Heading from "../_molecules/Heading";
+import { IoMdArrowBack } from "react-icons/io";
+import PhaseHeader from "./_molecules/PhaseHeader";
 
 const Phase = () => {
   const { phase } = useParams();
@@ -13,13 +15,13 @@ const Phase = () => {
   return (
     <PhaseContainer>
       <InnerContainer>
-        <Heading>
-          <h2>{data.phase}</h2>
-          <p>{data.title}</p>
-        </Heading>
+        <Header>
+          <Link to={"/app/dashboard"}>
+            <IoMdArrowBack />
+          </Link>
+        </Header>
         <Main>
-          <p>{data.description}</p>
-          <Timer timerNum={data.startTime} />
+          <Heading Comp={<PhaseHeader timerNum={data.startTime} />} />
         </Main>
       </InnerContainer>
     </PhaseContainer>
@@ -31,11 +33,6 @@ export default Phase;
 const PhaseContainer = styled.div`
   width: 100%;
   height: calc(100vh - 98px);
-  background-image: linear-gradient(
-    174deg,
-    rgb(4, 7, 16) 56%,
-    rgb(16, 17, 35) calc(56% + 2px)
-  );
   padding: 24px 64px;
   @media (max-width: 580px) {
     padding: 24px;
@@ -47,24 +44,22 @@ const InnerContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 84px;
+  gap: 3.6rem;
 `;
 
-const Heading = styled.div`
+const Header = styled.div`
   display: flex;
-  margin-top: -124px;
+  margin-top: -72px;
+  z-index: 99;
   gap: 4px;
+  width: 3.2rem;
   flex-direction: column;
-
-  h2 {
-    z-index: 99;
-    font-size: 38px;
-    margin-bottom: 0;
-    color: gold;
-  }
-  p {
-    z-index: 99;
-    font-size: 16px;
+  a {
+    color: #f8d749;
+    svg {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
   }
 `;
 

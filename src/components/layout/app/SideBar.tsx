@@ -6,6 +6,7 @@ import {
   TbLock,
 } from "react-icons/tb";
 import { GiVote } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
@@ -13,32 +14,39 @@ const SideBar = () => {
       <SideContainer>
         <InnerContent>
           <HeaderContainer>
-            <ImageContainer>
-              {/* <img src="/acom.png" alt="acom logo" /> */}
-              Acomunity
-            </ImageContainer>
+            <h1>Acommunity</h1>
           </HeaderContainer>
           <NavLinks>
             <ul>
               <li className="active">
-                <TbSmartHome />
-                <p>home</p>
+                <Link to="/app/dashboard">
+                  <TbSmartHome />
+                  <p>home</p>
+                </Link>
               </li>
               <li>
-                <TbParachute />
-                <p>airdrops</p>
+                <Link to="/app/dashboard">
+                  <TbParachute />
+                  <p>airdrops</p>
+                </Link>
               </li>
               <li>
-                <TbSwitchHorizontal />
-                <p>bridge</p>
+                <Link to="/app/dashboard">
+                  <TbSwitchHorizontal />
+                  <p>bridge</p>
+                </Link>
               </li>
               <li>
-                <TbLock />
-                <p>stake</p>
+                <Link to="/app/dashboard">
+                  <TbLock />
+                  <p>stake</p>
+                </Link>
               </li>
               <li>
-                <GiVote />
-                <p>vote</p>
+                <Link to="/app/dashboard">
+                  <GiVote />
+                  <p>vote</p>
+                </Link>
               </li>
             </ul>
           </NavLinks>
@@ -54,29 +62,24 @@ const SideBarMainContainer = styled.aside`
   top: 0;
   position: sticky;
   height: 100vh;
-  margin: 1.2rem 0;
   z-index: 50;
-  /* overflow: hidden; */
   display: flex;
+  background: #1e1e44;
+
+  @media (max-width: 760px) {
+    display: none;
+  }
 `;
 
 const SideContainer = styled.div`
-  padding: 2.4rem 0;
   display: flex;
-  width: 240px;
-  background: #2e3c72;
-  /* background: rgb(16, 17, 35); */
-  /* border-right: 2px solid #110295; */
-  height: calc(100vh - 32px);
+  /* height: calc(100vh - 32px); */
   transition-duration: 0.15s;
   transition-property: width;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding-bottom: 32px;
   padding-top: 32px;
-  border-radius: 10px;
   flex-shrink: 0;
-  margin-left: 10px;
-  margin: 10px 0;
 `;
 
 const InnerContent = styled.div`
@@ -85,13 +88,17 @@ const InnerContent = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 18px;
+  gap: 3.6rem;
 `;
 
 const HeaderContainer = styled.div`
-  font-size: 2rem;
-  font-family: fantasy;
-  color: gold;
+  > h1 {
+    color: #f8d749;
+    font-family: "Tomorrow", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: normal;
+  }
 `;
 
 const NavLinks = styled.nav`
@@ -100,43 +107,43 @@ const NavLinks = styled.nav`
 
   ul {
     display: flex;
-    gap: 2.4rem;
+    gap: 4.8rem;
     flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
 
     li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: "roboto mono";
-
-      > svg {
-        font-size: 22px;
-      }
-
-      > p {
-        font-size: 16px;
-        font-family: 400;
-        text-transform: capitalize;
-      }
-
       &.active {
-        color: gold;
-        > p {
-          font-weight: 800;
+        a {
+          color: gold;
+          > p {
+            font-weight: 800;
+          }
+
+          > svg {
+            font-size: 22px;
+          }
         }
+      }
+
+      > a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "Tomorrow";
+        color: #fff;
+        font-size: 1.8rem;
 
         > svg {
           font-size: 22px;
         }
+
+        > p {
+          font-size: 16px;
+          font-family: 400;
+          text-transform: capitalize;
+        }
       }
     }
-  }
-`;
-
-const ImageContainer = styled.div`
-  width: 100%;
-
-  > img {
-    width: 100%;
   }
 `;

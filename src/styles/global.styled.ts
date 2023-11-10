@@ -6,6 +6,10 @@ export const Global = createGlobalStyle`
     border: 0 solid;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 :root {
   font-family: 'Roboto Mono',monospace,Play,Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

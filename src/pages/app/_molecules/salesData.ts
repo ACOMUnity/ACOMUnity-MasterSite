@@ -39,7 +39,7 @@ export const phaseMaps: { [key: string]: PhaseData } = {
     title: "seed round - an exclusive prelude",
     description:
       "Inaugurating our voyage, the Seed Round stands as an invite-only affiar. Here, we extend a discreet invitation to our early supporterss, setting the stage for the AGEMS revolution",
-    startTime: 1697943543000,
+    startTime: 1700993543000,
     endTime: 0,
   },
   phase_2: {

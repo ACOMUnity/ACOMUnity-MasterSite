@@ -29,9 +29,7 @@ const AppHeader: React.FC = () => {
           </ConnectButton>
         ) : (
           <ConnectButton>
-            <Button onClick={() => open()} $type="outlined">
-              connect wallet
-            </Button>
+            <Button onClick={() => open()}>connect wallet</Button>
           </ConnectButton>
         )}
       </HeaderDetails>
@@ -44,6 +42,7 @@ export default AppHeader;
 const HeaderContainer = styled.div`
   width: 100%;
   position: sticky;
+  font-family: "Tomorrow";
   top: 0;
   background-color: rgb(4, 8, 16);
   z-index: 9;
@@ -77,6 +76,24 @@ const ConnectButton = styled.div`
   > svg {
     font-size: 20px;
     margin-top: 8px;
+  }
+
+  > button {
+    display: flex;
+    max-width: 222px;
+    width: 100%;
+    height: 48px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: "Tomorrow";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 `;
 
