@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { styled } from "styled-components";
-import { slideInDown } from "../../../styles/animate.styled";
 
 interface IProps {
   timerNum: number;
