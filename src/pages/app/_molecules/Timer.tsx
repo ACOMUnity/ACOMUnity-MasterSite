@@ -78,7 +78,7 @@ const TimerContainer = styled.div`
 const InnerContainer = styled.div`
   width: 100%;
   display: flex;
-  gap: 2.4rem;
+  gap: 2rem;
 
   @media (max-width: 500px) {
     flex-wrap: wrap;
@@ -96,7 +96,7 @@ const InnerContainer = styled.div`
     padding: 0 3.2rem;
 
     h3 {
-      font-size: 4.8rem;
+      font-size: 3.2rem;
       margin: 0;
       font-weight: 700;
       font-style: normal;
@@ -106,7 +106,7 @@ const InnerContainer = styled.div`
 
     span {
       color: #fff;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       font-style: normal;
       font-weight: 400;
       line-height: normal;

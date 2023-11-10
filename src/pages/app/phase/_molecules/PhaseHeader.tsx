@@ -47,7 +47,7 @@ const Header = styled.div`
   font-family: "Tomorrow";
 
   h1 {
-    font-size: 2.8rem;
+    font-size: 4.8rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
