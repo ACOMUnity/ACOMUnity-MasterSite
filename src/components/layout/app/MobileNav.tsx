@@ -32,7 +32,7 @@ export default MobileNav;
 
 const Container = styled.div`
   width: 100%;
-  height: 4rem;
+  height: 9rem;
   background: #1e1e44;
   display: none;
   position: fixed;
