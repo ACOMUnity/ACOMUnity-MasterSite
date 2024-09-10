@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             </li>
           </NavLinks>
           <CallToAction>
-            <Link to="/app">
+            <Link to="/app/dashboard">
               <Button $type="outlined">Launch App</Button>
             </Link>
           </CallToAction>
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
           >
             Roadmap
           </li>
-          <Link to="/app">
+          <Link to="/app/dashboard">
             <Button $type="outlined" fullwidth="true">
               Launch App
             </Button>

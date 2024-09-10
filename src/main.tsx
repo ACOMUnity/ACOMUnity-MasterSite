@@ -1,38 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import LandingPageLayout from "./components/layout/index";
 import { Global } from "./styles/global.styled";
-import LandingPage from "./pages/LandingPage";
+import HomeLayout from "./components/layout/home";
 import App from "./pages/app";
+import LandingPage from "./pages/LandingPage";
+import AppLayout from "./components/layout/app";
+import Phase from "./pages/app/phase";
 
 const router = createBrowserRouter([
   {
+    element: <HomeLayout />,
     path: "/",
-    element: <LandingPageLayout />,
     children: [
       {
-        index: true,
         path: "",
         element: <LandingPage />,
       },
+    ],
+  },
+  {
+    element: <AppLayout />,
+    path: "/",
+    children: [
       {
-        path: "/app",
+        path: "app/dashboard",
         element: <App />,
+      },
+      {
+        path: "app/dashboard/:phase",
+        element: <Phase />,
       },
     ],
   },
-  // {
-  //   path: "/",
-  //   element: <AppLayout />,
-  //   children: [
-  //     {
-  //       index: true,
-  //       path: "",
-  //       element: <App />,
-  //     },
-  //   ],
-  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

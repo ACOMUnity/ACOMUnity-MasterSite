@@ -112,6 +112,14 @@ export const Button = styled.button<IBtn>`
     $elevated &&
     "box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15)"}
 
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      &:disabled {
+        background-color: rgba(255, 215, 0, 0.5);
+      }
+    `} 
+
   ${({ $type }) => {
     switch ($type) {
       case "text":
@@ -142,26 +150,3 @@ export const Button = styled.button<IBtn>`
     }
   }}
 `;
-
-// Resizes based on device scrren size, very fluid
-
-// export const FluidTitle = styled.h1`
-//   color: ${({ color }) => (color ? color : "black")};
-//   font-size: 4.8vw;
-//   font-weight: ${({ $weight }) => ($weight ? $weight : "700")};
-
-//   ${({ theme }) => theme.breakpoints.up("sm")} {
-//     font-size: ${(props) => (props.$size ? props.$size : "24px")};
-//   }
-// `;
-
-// This is a spinning loader, inline by default, to use the overlay Loader, you can checkout the OverlayLoader in src/components/ui
-
-// export const Loader = styled.div`
-//   width: 28px;
-//   height: 28px;
-//   border: 5px solid ${({ theme }) => theme.color.main.default};
-//   border-radius: 50%;
-//   border-top: 5px solid ${({ theme }) => theme.color.main["50"]};
-//   animation: ${spin} 1s linear infinite;
-// `;

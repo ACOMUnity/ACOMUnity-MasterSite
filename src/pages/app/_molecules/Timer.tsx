@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { styled } from "styled-components";
-import { slideInDown } from "../../../styles/animate.styled";
 
-const Timer: React.FC = () => {
-  const COUNT_DOWN_DATE = new Date(1694695885000);
+interface IProps {
+  timerNum: number;
+}
+const Timer = ({ timerNum }: IProps) => {
+  const COUNT_DOWN_DATE = new Date(timerNum);
   const [timeRemaining, setTimeRemaining] = useState<number>();
 
   useEffect(() => {
@@ -17,6 +19,7 @@ const Timer: React.FC = () => {
   }, []);
 
   const handleTime = () => {
+    if (timerNum === 0) return;
     if (!timeRemaining) return;
     const days =
       String(Math.floor(timeRemaining / 86400)).length === 1
@@ -69,13 +72,12 @@ export default Timer;
 
 const TimerContainer = styled.div`
   width: 100%;
-  padding-top: 32px;
 `;
 
 const InnerContainer = styled.div`
   width: 100%;
   display: flex;
-  gap: 24px;
+  gap: 2rem;
 
   @media (max-width: 500px) {
     flex-wrap: wrap;
@@ -85,32 +87,28 @@ const InnerContainer = styled.div`
 
   > div {
     display: flex;
-    width: 120px;
+    width: 1.2rem;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 3px;
     border-radius: 8px;
-    padding: 16px 32px;
-    border: 1px solid gold;
+    padding: 0 3.2rem;
 
     h3 {
-      font-size: 48px;
-      font-weight: 700;
+      font-size: 3.2rem;
       margin: 0;
+      font-weight: 700;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
     }
-  }
 
-  > div:nth-child(1) {
-    animation: ${slideInDown} 0.5s ease-in;
-  }
-  > div:nth-child(2) {
-    animation: ${slideInDown} 1s ease-in;
-  }
-  > div:nth-child(3) {
-    animation: ${slideInDown} 1.5s ease-in;
-  }
-  > div:nth-child(4) {
-    animation: ${slideInDown} 2s ease-in;
+    span {
+      color: #fff;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
   }
 `;

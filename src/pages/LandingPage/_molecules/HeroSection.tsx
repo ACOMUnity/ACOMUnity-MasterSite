@@ -52,7 +52,7 @@ const HeroSection: React.FC = () => {
           <ButtonContainer>
             <Button fullwidth="true">Features</Button>
             <Button $type="outlined" fullwidth="true">
-              <Link to="/app">Launch App</Link>
+              <Link to="/app/dashboard">Launch App</Link>
             </Button>
           </ButtonContainer>
         </CallToActionContainer>
